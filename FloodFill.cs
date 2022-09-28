@@ -44,13 +44,13 @@ public class FloodFill
         if (PositionClick is null) return;
         _ = PositionClick.ApplyColor(Area, Color);
 
-        Console.WriteLine("\n=== Start Building (+) Draw ======================================================\n");
+        Console.WriteLine("\n=== Start - (+) Addition Operator Drawing ======================================================\n");
         Parallel.Invoke(
             () => { ChangeColorRecursive(PositionClick.Up); },
             () => { ChangeColorRecursive(PositionClick.Down); },
             () => { ChangeColorRecursive(PositionClick.Right); },
             () => { ChangeColorRecursive(PositionClick.Left); });
-        Console.WriteLine("\n=== End Building (+) Draw =========================================================\n");
+        Console.WriteLine("\n=== End - (+) Addition Operator Drawing =========================================================\n");
     }
     #endregion
 }
